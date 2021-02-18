@@ -1,3 +1,3 @@
 # BlixateVM
 
-Read [/BlixateVM.md](this)
+Read [this for more information](/BlixateVM.md)
