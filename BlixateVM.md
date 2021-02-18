@@ -14,13 +14,11 @@
   2. Blixate VM: Helps the operating system run Executable Blixate Programs
   3. Bytecode: Where your program sits.
   
-  This means it's reasonably high-level, but not too high-level. Unlike Python or C#, all code is run as bytecode; which means that reading each instruction and executing
-  it takes smaller amounts of time.
+  This means it's reasonably high-level, but not too high-level. Unlike Python or C#, code must be compiled as bytecode; which means that reading each instruction and executing it takes smaller amounts of time.
 ## Security
   Running programs inside the VM means that they are more secure.
-### Malware
-  Implementing anti-malware into a Blixate VM program is difficult, but this is a requirement to prevent malware from infecting machines. Since the anti-malware will never
-  be perfect, there should always be caution with running programs from people you don't trust. If malware is developed, 
+### Anti-Malware
+  Implementing anti-malware into a Blixate VM program is difficult, but this is a requirement to prevent malware from infecting machines. Since the anti-malware will never be perfect, there should always be caution with running programs from people you don't trust. If malware is developed, 
   patching the exploit is ever-more easy than installing a windows update.
   
   Malware isn't easy to develop inside of Blixate VM, but server-security attacks are still possible.
