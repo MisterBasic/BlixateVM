@@ -80,3 +80,17 @@
     System.output(example.classVariable); // System.output can also output numbers and stuff.
   }
   ```
+# Why?
+  BCS is a way of programming the BlixateVM using human-readable syntax. This style of language is familar to web-developers, who may want to do low-level operations with a language that isn't too low-level.
+## Why is it similar to JavaScript?
+  Most people are familar with JavaScript, since it's one of the most important programming languages in web development. But, JavaScript is an interpreted language, which leaves little room for speed. Any language that is compiled typically requires strict-typing, but since BCS runs in BlixateVM, all variables are just black boxes, and no type is stored with the variable. It's the compilers job to figure out what to do with the memory, and how to modify it.
+## Is BCS the only language?
+  No, more are planned. Here are a few that I plan to make:
+- BLS (Stands for nothing): A high-level object-oriented programming language, with strict-typing and classes. Similar to Java instead of JavaScript.
+- BLX (Stands for nothing): A lower-level modification tool for BLS.
+- CMP (Compiled (Blixate) Machine Program): An assembly-like language that is directly-translated to BVM machine code.
+  BCS is just the middle ground.
+## Why wouldn't I just use Java or JavaScript?
+  **You can just use Java or JavaScript**: In fact, those languages are great for what they are used for! This isn't saying that "Java is terrible and you should never use it!" or the same with JavaScript. This isn't a replacement, I'm only using similar syntax because most developers and programmers are familar with them, and therefore makes writing programs much easier since new concepts are easier to learn if you already know the basics. Blixate Languages don't work in the browser, although the syntaxes are similar and can be converted, so they aren't replacements.
+## Why would I use BCS over any other language?
+  BCS is for programming Blixate VM, which can do a range of tasks inside of a sandbox environment. If you want to learn more about Blixate VM, [click here](https://github.com/MisterBasic/BlixateVM/blob/main/BlixateVM.md)
