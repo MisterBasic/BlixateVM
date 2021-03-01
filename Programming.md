@@ -89,7 +89,6 @@
 - BLS (Stands for nothing): A high-level object-oriented programming language, with strict-typing and classes. Similar to Java instead of JavaScript.
 - BLX (Stands for nothing): A lower-level modification tool for BLS.
 - CMP (Compiled (Blixate) Machine Program): An assembly-like language that is directly-translated to BVM machine code.
-  BCS is just the middle ground.
 ## Why wouldn't I just use Java or JavaScript?
   **You can just use Java or JavaScript**: In fact, those languages are great for what they are used for! This isn't saying that "Java is terrible and you should never use it!" or the same with JavaScript. This isn't a replacement, I'm only using similar syntax because most developers and programmers are familar with them, and therefore makes writing programs much easier since new concepts are easier to learn if you already know the basics. Blixate Languages don't work in the browser, although the syntaxes are similar and can be converted, so they aren't replacements.
 ## Why would I use BCS over any other language?
