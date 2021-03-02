@@ -45,7 +45,7 @@
     return a + b;
   }
   ```
-  
+  The `main` function cannot be called, since an **Entry Point** is not a function.
 ### Variables
   Defining a variable is very simple:
   ```javascript
@@ -60,6 +60,45 @@
   var myClass: MyObject();
   ```
   When creating a variable of a Object, then a type ***MUST*** be specified. The type becomes a constructor if there are brackets at the end of the type.
+### Restricted variables, classes and functions
+  Functions, variables, and classes can have a flag called "restricted" applied to them.
+  ```
+  module RestrictedExample;
+
+  // This makes it so other files cannot use this variable, since they are out-of-scope
+  restricted var someVariable: string;
+
+  restricted class MyClass {
+    restricted var someVar: int // Can only be edited inside this scope and lower, pretty much just this class.
+
+    constructor(i: int) {
+      this.someVar = i; // Allowed
+    }
+    
+    function setSomeVar(i: int) int { // This function isn't restricted
+      this.someVar = i; // Allowed
+    }
+  }
+
+  restricted function myFunc() bool {
+    return someVariable; // Allowed
+  }
+
+  // Main cannot have restricted applied to it, since it's technically not a function.
+  function main() {
+    myFunc(); // Allowed
+    var classInstance: MyClass(10);
+    classInstance.someVar = 15; // NOT ALLOWED
+    classInstance.setSomeVar(15); // Allowed since setSomeVar() isn't restricted
+    /* 
+    If a module defines a global-variable as "restricted," i cannot be used.
+    
+    For example:
+     */
+    System.stdout.write("Hello, world!"); // stdout is restricted, therefore cannot be accessed.
+  }
+  ```
+  
 ### Example
   ```
   module ExampleModule;
