@@ -98,7 +98,12 @@
     System.stdout.write("Hello, world!"); // stdout is restricted, therefore cannot be accessed.
   }
   ```
-  
+  What this means for each type:
+  - Function: The function can only be called in the local **Class** or **Module**
+  - Variable: The variable can only be read or changed in the local **Class** or **Module**
+    - **THIS IS NOT TO BE CONFUSED WITH LOCAL VARIABLES**
+  - Class: The class can only be constructed in the local **Module**.
+    - I'm not sure if accessing an object that is an instance of that class from a different module should count. Up for discussion :)
 ### Example
   ```
   module ExampleModule;
