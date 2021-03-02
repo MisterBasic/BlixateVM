@@ -124,6 +124,14 @@
     System.output(example.classVariable); // System.output can also output numbers and stuff.
   }
   ```
+# Blixate Virtual Machine vague details
+## Function calls
+  Function arguments are placed onto the stack prior to the call, but first the return address has to be put onto the stack. When calling a function, a seperate call-stack is used to push the return address. This fixes the problem of the return address being the top of the stack. When returning from a function, an address from this call stack is retrieved and then returned to. Parameters to a function call are pushed onto the stack prior, and placed into a temporary area in memory (local variable storage). These can then be accessed when needed.
+  If this function is to call another function, and the called function returns, the previous temporary variable storage should still be fine. This can be done a variety of ways, but this is to make sure that nothing gets lost when calling functions inside functions.
+## Entry Point
+  The entry point is simply a ROM address. This is normally zero, since the first method is the first thing that should be run, but can change depending on if the method changes.
+## Exiting a program
+  Blixate VM always exits if the program returns while the call stack is empty.
 # Why?
   BCS is a way of programming the BlixateVM using human-readable syntax. This style of language is familar to web-developers, who may want to do low-level operations with a language that isn't too low-level.
 ## Why is it similar to JavaScript?
